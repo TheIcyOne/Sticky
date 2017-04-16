@@ -7,5 +7,5 @@ public abstract class LogBase extends BlockLog{
 		
 	}
 	
-	public abstract EnumType getTreeType();
+	public abstract EnumTreeType getTreeType();
 }

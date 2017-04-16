@@ -2,7 +2,10 @@ package com.headfishindustries.sticky.gen;
 
 import java.util.Random;
 
+import com.headfishindustries.sticky.blocks.EnumTreeType;
 import com.headfishindustries.sticky.blocks.LogBase;
+import com.headfishindustries.sticky.blocks.SaplingBase;
+import com.headfishindustries.sticky.blocks.logs.LogMonster;
 
 import net.minecraft.block.BlockAir;
 import net.minecraft.block.BlockLeaves;
@@ -26,11 +29,20 @@ public class TreeGenerator extends WorldGenAbstractTree{
 	}
 
 	@Override
-	public boolean generate(World worldIn, Random rand, BlockPos position) {
+	public boolean generate(World worldIn, Random rand, BlockPos pos) {
+		if (worldIn.isRemote || !(worldIn.getBlockState(pos).getBlock() instanceof SaplingBase)) return false;
 		int height = rand.nextInt(3) + 5;
-		IBlockState state = new LogBase().getDefaultState().withProperty(LogBase.LOG_AXIS, EnumAxis.Y);
-		generatePillar(worldIn, position, height, state);
-		return false;
+		EnumTreeType type = ((SaplingBase)(worldIn.getBlockState(pos).getBlock())).getTreeType();
+		IBlockState logstate;
+		switch (type){
+		case MONSTER:
+			logstate = new LogMonster().getDefaultState().withProperty(LogBase.LOG_AXIS, BlockLog.EnumAxis.Y);
+			break;
+		default:
+			return false;	
+		}
+		generatePillar(worldIn, pos, height, logstate);
+		return true;
 	}
 	
 	public boolean generatePillar(World worldIn, BlockPos start, int height, IBlockState state){

@@ -1,6 +1,6 @@
 package com.headfishindustries.sticky.blocks;
 
-public enum EnumType {
+public enum EnumTreeType {
 	MONSTER,
 	PASSIVE,
 	VILLAGER,

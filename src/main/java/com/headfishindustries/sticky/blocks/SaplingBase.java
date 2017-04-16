@@ -11,6 +11,8 @@ import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenBirchTree;
 
 public abstract class SaplingBase extends BlockBush implements IGrowable{
+	
+	public abstract EnumTreeType getTreeType();
 
 	private void updateOrGrow(World world, BlockPos pos, IBlockState state, Random rand){
 		if (!(world.getBlockState(pos).getBlock() instanceof SaplingBase)) return;
