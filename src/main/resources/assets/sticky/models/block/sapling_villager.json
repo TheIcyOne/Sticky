@@ -1,0 +1,7 @@
+{
+	"parent": "block/cross",
+	"textures":	{
+		"cross": "sticky:blocks/sapling_villager"
+	}
+}
+	

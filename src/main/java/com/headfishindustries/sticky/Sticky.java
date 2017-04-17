@@ -8,7 +8,10 @@ import com.headfishindustries.sticky.proxy.CommonProxy;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
+import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.gameevent.TickEvent.PlayerTickEvent;
 
 @Mod(modid=Sticky.MODID, version = Sticky.VERSION, name=Sticky.MODID)
 public class Sticky {
@@ -24,4 +27,15 @@ public class Sticky {
 	public void preInit(FMLPreInitializationEvent e){
 		proxy.preInit();
 	}
+	
+	@EventHandler
+	public void init(FMLInitializationEvent e){
+		proxy.init();
+	}
+	
+	@EventHandler
+	public void postInit(FMLPostInitializationEvent e){
+		proxy.postInit();
+	}
+
 }
