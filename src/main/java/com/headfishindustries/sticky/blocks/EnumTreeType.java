@@ -6,5 +6,6 @@ public enum EnumTreeType {
 	VILLAGER,
 	NETHER,
 	ENDER,
-	EXPLOSIVE
+	EXPLOSIVE,
+	RAINBOW
 }

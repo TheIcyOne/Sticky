@@ -43,6 +43,26 @@ public class TreeGenerator extends WorldGenAbstractTree{
 			logstate = BlockDefs.logVillager.getDefaultState();
 			leafstate = BlockDefs.leavesVillager.getDefaultState();
 			break;
+		case ENDER:
+			logstate = BlockDefs.logEnder.getDefaultState();
+			leafstate = BlockDefs.leavesEnder.getDefaultState();
+			break;
+		case EXPLOSIVE:
+			logstate = BlockDefs.logExplosive.getDefaultState();
+			leafstate = BlockDefs.leavesExplosive.getDefaultState();
+			break;
+		case NETHER:
+			logstate = BlockDefs.logNether.getDefaultState();
+			leafstate = BlockDefs.leavesNether.getDefaultState();
+			break;
+		case PASSIVE:
+			logstate = BlockDefs.logPassive.getDefaultState();
+			leafstate = BlockDefs.leavesPassive.getDefaultState();
+			break;
+		case RAINBOW:
+			logstate = BlockDefs.logRainbow.getDefaultState();
+			leafstate = BlockDefs.leavesRainbow.getDefaultState();
+			break;
 		default:
 			return false;	
 		}

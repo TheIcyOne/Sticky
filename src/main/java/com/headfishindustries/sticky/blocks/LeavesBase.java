@@ -16,6 +16,8 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityList;
 import net.minecraft.entity.EntityLiving;
+import net.minecraft.entity.passive.EntitySheep;
+import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3i;
@@ -49,18 +51,36 @@ public abstract class LeavesBase extends BlockLeaves implements IGrowable{
 		Vec3i vec = new Vec3i(rand.nextInt(6) - 3, rand.nextInt(6) - 3, rand.nextInt(6) - 3);
 		BlockPos sPos = pos.add(vec);
 		if (worldIn.getBlockState(sPos).getBlock() instanceof BlockAir){
-			EntityLiving e = null;
+			entityGenerate(worldIn, sPos, ((LeavesBase)(worldIn.getBlockState(pos).getBlock())).getTreeType(), s, rand)	;		
+		}
+		}
+	
+	public void entityGenerate(World world, BlockPos sPos, EnumTreeType type, Object c, Random r){
+		EntityLiving e = null;
 			try{
-			e = (EntityLiving) EntityList.createEntityByID(EntityList.getID((Class<? extends Entity>) s), worldIn);
+			e = (EntityLiving) EntityList.createEntityByID(EntityList.getID((Class<? extends Entity>) c), world);
 			}catch (Throwable t)
 			{
 			t.printStackTrace();
 			return;
 			}
+		
+		
+		switch(type){
+		case RAINBOW:
+			if (e instanceof EntitySheep){
+				((EntitySheep)e).setFleeceColor(EnumDyeColor.byMetadata(r.nextInt(15)));
+				if (r.nextInt(10) == 0) e.setCustomNameTag("jeb_");
+			}
+			break;
+		default:
+			break;
+			
+		}
 			e.setPosition(sPos.getX(), sPos.getY(), sPos.getZ());
-			worldIn.spawnEntity(e);
-		}
-		}
+			world.spawnEntity(e);
+	}
+	
 	@Override
     public java.util.List<ItemStack> getDrops(IBlockAccess world, BlockPos pos, IBlockState state, int fortune) {
 		List<ItemStack> l = new java.util.ArrayList<ItemStack>();
