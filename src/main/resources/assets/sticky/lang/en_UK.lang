@@ -1,0 +1,27 @@
+#English translation by The_Icy_One
+
+itemGroup.sticky.Trees=Sticky Blocks
+
+tile.leavesmonster.name=Monstrous Leaves
+tile.leavesvillager.name=Homely Leaves
+tile.leavesender.name=Fluctuating Leaves
+tile.leavesexplosive.name=Unstable Leaves
+tile.leavesnether.name=Incendiary Leaves
+tile.leavespassive.name=Unassuming Leaves
+tile.leavesrainbow.name=Variegated Leaves
+
+tile.logmonster.name=Monstrous Log
+tile.logvillager.name=Homely Log
+tile.logender.name=Fluctuating Log
+tile.logexplosive.name=Unstable Log
+tile.lognether.name=Incendiary Log
+tile.logpassive.name=Unassuming Log
+tile.lograinbow.name=Variegated Log
+
+tile.saplingmonster.name=Monstrous Sapling
+tile.saplingvillager.name=Homely Sapling
+tile.saplingender.name=Fluctuating Sapling
+tile.saplingexplosive.name=Unstable Sapling
+tile.saplingnether.name=Incendiary Sapling
+tile.saplingpassive.name=Unassuming Sapling
+tile.saplingrainbow.name=Variegated Sapling

@@ -1,0 +1,16 @@
+[
+{
+  "modid": "sticky",
+  "name": "sticky",
+  "description": "Woodn't you like to know what this does? Leave this menu and find out.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["The_Icy_One"],
+  "credits": "My favourite type of credits are Industrial Credits.",
+  "logoFile": "stick.png",
+  "screenshots": [],
+  "dependencies": []
+}
+]

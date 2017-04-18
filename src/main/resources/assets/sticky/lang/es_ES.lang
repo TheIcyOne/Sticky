@@ -1,0 +1,20 @@
+#Traduccion a Español Estándar por The_Icy_One
+
+itemGroup.sticky.Trees=Bloques Pegajosos
+
+tile.leavesmonster.name=Hojas Monstruosas
+tile.leavesvillager.name=Hojas Familiares
+tile.leavesender.name=Hojas Oscilantes
+tile.leavesexplosive.name=Hojas Inestables
+tile.leavesnether.name=Hojas Inflamables
+tile.leavespassive.name=Hojas Pasivas
+tile.leavesrainbow.name=Hojas Jaspeadas
+
+tile.logmonster.name=Ramas Monstruosas
+tile.logvillager.name=Ramas Familiares
+tile.logender.name=Ramas Oscilantes
+tile.logexplosive.name=Ramas Inestables
+tile.lognether.name=Ramas Inflamables
+tile.logpassive.name=Ramas Pasivas
+tile.lograinbow.name=Ramas Jaspeadas
+
