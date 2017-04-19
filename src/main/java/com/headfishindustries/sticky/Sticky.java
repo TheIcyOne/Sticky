@@ -13,10 +13,10 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent.PlayerTickEvent;
 
-@Mod(modid=Sticky.MODID, version = Sticky.VERSION, name=Sticky.MODID)
+@Mod(modid=Sticky.MODID, version = Sticky.VERSION, name="Sticky")
 public class Sticky {
 	public static final String MODID = "sticky";
-	public static final String VERSION = "GRADLE:VERSION" + "GRADLE:BUILD";
+	public static final String VERSION = "%gradle.version%";
 	
 	public static final Logger LOGGER = LogManager.getLogger(MODID);
 	

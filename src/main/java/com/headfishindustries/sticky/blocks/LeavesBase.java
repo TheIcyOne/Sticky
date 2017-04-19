@@ -16,6 +16,7 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityList;
 import net.minecraft.entity.EntityLiving;
+import net.minecraft.entity.item.EntityTNTPrimed;
 import net.minecraft.entity.passive.EntitySheep;
 import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.ItemStack;
@@ -56,16 +57,14 @@ public abstract class LeavesBase extends BlockLeaves implements IGrowable{
 		}
 	
 	public void entityGenerate(World world, BlockPos sPos, EnumTreeType type, Object c, Random r){
-		EntityLiving e = null;
+		Entity e = null;
 			try{
-			e = (EntityLiving) EntityList.createEntityByID(EntityList.getID((Class<? extends Entity>) c), world);
+			e = (Entity) EntityList.createEntityByID(EntityList.getID((Class<? extends Entity>) c), world);
 			}catch (Throwable t)
 			{
 			t.printStackTrace();
 			return;
-			}
-		
-		
+			}		
 		switch(type){
 		case RAINBOW:
 			if (e instanceof EntitySheep){
