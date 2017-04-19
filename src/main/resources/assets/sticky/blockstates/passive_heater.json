@@ -1,0 +1,13 @@
+{
+    "forge_marker": 1,
+    "defaults": {
+        "transform": "forge:default-block"
+    },
+    "variants": {
+        "level=0": { "model": "sticky:passive_heater_empty" },
+        "level=1": { "model": "sticky:passive_heater_level1" },
+        "level=2": { "model": "sticky:passive_heater_level2" },
+        "level=3": { "model": "sticky:passive_heater_level3" },
+        "normal": { "model": "sticky:passive_heater_empty" }
+    }
+}

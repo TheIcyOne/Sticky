@@ -5,13 +5,14 @@ import org.apache.logging.log4j.Logger;
 
 import com.headfishindustries.sticky.proxy.CommonProxy;
 
+import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
+import net.minecraftforge.fml.common.event.FMLConstructionEvent;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-import net.minecraftforge.fml.common.gameevent.TickEvent.PlayerTickEvent;
 
 @Mod(modid=Sticky.MODID, version = Sticky.VERSION, name="Sticky")
 public class Sticky {
@@ -22,6 +23,12 @@ public class Sticky {
 	
 	@SidedProxy(clientSide="com.headfishindustries.sticky.proxy.ClientProxy", serverSide="com.headfishindustries.sticky.proxy.CommonProxy", modId=MODID)
 	public static CommonProxy proxy;
+	
+	@EventHandler
+	public void construct(FMLConstructionEvent e){
+		//I'm not doing buckets myself.
+		FluidRegistry.enableUniversalBucket();
+	}
 	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent e){

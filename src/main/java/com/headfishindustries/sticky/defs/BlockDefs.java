@@ -2,6 +2,8 @@ package com.headfishindustries.sticky.defs;
 
 import com.headfishindustries.sticky.blocks.logs.*;
 import com.headfishindustries.sticky.blocks.sapling.*;
+import com.headfishindustries.sticky.Sticky;
+import com.headfishindustries.sticky.blocks.BlockPassiveHeater;
 import com.headfishindustries.sticky.blocks.leaves.*;
 
 import net.minecraft.block.Block;
@@ -44,6 +46,8 @@ public class BlockDefs {
 	public static final Block logRainbow = registerBlock(new LogRainbow(), "log_rainbow").setUnlocalizedName("lograinbow");
 	public static final Block saplingRainbow = registerBlock(new SaplingRainbow(), "sapling_rainbow").setUnlocalizedName("saplingrainbow");
 	
+	public static final Block passiveHeater = registerBlock(new BlockPassiveHeater(), "passive_heater").setUnlocalizedName("passive_heater");
+	
 	public void preInit(){
 		//Do things later. Not now.
 
@@ -53,6 +57,7 @@ public class BlockDefs {
 		
 		if(block.getRegistryName() == null) block.setRegistryName(name);
 		GameRegistry.register(block);
+		Sticky.LOGGER.info("Registering block " + block.getRegistryName());
 		GameRegistry.register(new ItemBlock(block).setRegistryName(name));
 		return block;
 	}
@@ -92,6 +97,8 @@ public class BlockDefs {
 		registerTexture(leavesRainbow);
 		registerTexture(logRainbow);
 		registerTexture(saplingRainbow);
+		
+		registerTexture(passiveHeater);
 	} 
 	
 }

@@ -15,8 +15,6 @@ import net.minecraft.block.BlockPlanks.EnumType;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityList;
-import net.minecraft.entity.EntityLiving;
-import net.minecraft.entity.item.EntityTNTPrimed;
 import net.minecraft.entity.passive.EntitySheep;
 import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.ItemStack;
@@ -45,7 +43,6 @@ public abstract class LeavesBase extends BlockLeaves implements IGrowable{
 		return true;
 	}
 	
-	@SuppressWarnings("unchecked")
 	public void grow(World worldIn, Random rand, BlockPos pos, IBlockState state) {
 		if (!(worldIn.getBlockState(pos).getBlock() instanceof LeavesBase)) return;
 		Object s = randomValue(this.getValidSpawns());
@@ -56,6 +53,7 @@ public abstract class LeavesBase extends BlockLeaves implements IGrowable{
 		}
 		}
 	
+	@SuppressWarnings("unchecked")
 	public void entityGenerate(World world, BlockPos sPos, EnumTreeType type, Object c, Random r){
 		Entity e = null;
 			try{
