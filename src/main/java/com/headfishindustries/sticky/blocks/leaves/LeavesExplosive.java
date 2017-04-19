@@ -30,7 +30,7 @@ public class LeavesExplosive extends LeavesBase{
 		HashMap<Object, Integer> spawns = new HashMap<Object, Integer>();
 		spawns.put(EntityCreeper.class, 100);
 		spawns.put(EntityGhast.class, 25);
-		spawns.put(EntityTNTPrimed.class, 200);
+		spawns.put(EntityTNTPrimed.class, 2);
 		return spawns;
 	}
 
