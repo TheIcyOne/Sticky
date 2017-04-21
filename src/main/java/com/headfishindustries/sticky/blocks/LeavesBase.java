@@ -57,7 +57,8 @@ public abstract class LeavesBase extends BlockLeaves implements IGrowable{
 	public void entityGenerate(World world, BlockPos sPos, EnumTreeType type, Object c, Random r){
 		Entity e = null;
 			try{
-			e = (Entity) EntityList.createEntityByID(EntityList.getID((Class<? extends Entity>) c), world);
+			e = EntityList.newEntity((Class<? extends Entity>) c, world);
+			world.spawnEntity(e);
 			}catch (Throwable t)
 			{
 			t.printStackTrace();
