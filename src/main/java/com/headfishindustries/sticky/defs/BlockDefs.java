@@ -46,10 +46,11 @@ public class BlockDefs {
 	public static final Block logRainbow = registerBlock(new LogRainbow(), "log_rainbow").setUnlocalizedName("lograinbow");
 	public static final Block saplingRainbow = registerBlock(new SaplingRainbow(), "sapling_rainbow").setUnlocalizedName("saplingrainbow");
 	
-	public static final Block passiveHeater = registerBlock(new BlockPassiveHeater(), "passive_heater").setUnlocalizedName("passive_heater");
+	//public static final Block passiveHeater = registerBlock(new BlockPassiveHeater(), "passive_heater").setUnlocalizedName("passive_heater");
 	
 	public void preInit(){
 		//Do things later. Not now.
+		//Fine, do them now if you want.
 
 	}
 	
@@ -98,7 +99,7 @@ public class BlockDefs {
 		registerTexture(logRainbow);
 		registerTexture(saplingRainbow);
 		
-		registerTexture(passiveHeater);
+		//registerTexture(passiveHeater);
 	} 
 	
 }
